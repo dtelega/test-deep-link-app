@@ -30,11 +30,11 @@
     </style>
 </head>
 <body>
-    <button onclick="openDeepLink()">Open Deep Link</button>
+    <button id="deeplinkbtn" onclick="openDeepLink()">Open Deep Link</button>
 
     <script>
         function openDeepLink() {
-            const url = "https://wix.app/payments/success";
+            const url = 'https://wix.app/payments/success?status="success"&errorCode="1009"&extra="true"';
             window.open(url, "_blank");
         }
     </script>
