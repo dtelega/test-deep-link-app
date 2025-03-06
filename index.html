@@ -34,7 +34,12 @@
 
     <script>
         function openDeepLink() {
-            const url = 'https://wix.app/payments/success?status="success"&errorCode="1009"&extra="true"';
+            const data = encodeURIComponent(JSON.stringify({
+                status: "success",
+                errorCode: "1009",
+                someExtraParam: true,
+            }));
+            const url = `https://wix.app/payments/checkout-result/${data}`;
             window.open(url, "_blank");
         }
     </script>
