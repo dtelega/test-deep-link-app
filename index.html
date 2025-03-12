@@ -26,20 +26,20 @@
          }
          button:hover {
              background-color: #005bb5;
+             margin-bottom: 20px;
          }
      </style>
 </head>
 <body>
-    <button id="deeplinkbtn" onclick="openDeepLink()">Open Deep Link</button>
+    <button id="deeplinkbtn" onclick="openErrorDeepLink()">Simulate Error</button>
+    <button id="deeplinkbtn" onclick="openSuccessDeepLink()">Simulate Sucess</button>
  
      <script>
-         function openDeepLink() {
-             const data = encodeURIComponent(JSON.stringify({
-                 errorCode: "1009",
-                 someExtraParam: true,
-             }));
-             const url = `https://wix.app/payments/checkout-result/error/${data}`;
-             window.open(url, "_blank");
+         function openErrorDeepLink() {
+             window.open('https://wix.app/payments/checkout-result/error/1009', "_blank");
+         }
+        function openSuccessDeepLink() {
+             window.open('https://wix.app/payments/checkout-result/success', "_blank");
          }
     </script>
 </body>
