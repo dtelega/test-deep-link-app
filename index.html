@@ -4,10 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deep Link</title>
+    <style>
+         body {
+             font-family: Arial, sans-serif;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+             margin: 0;
+             background-color: #f4f4f4;
+         }
+         button {
+             padding: 10px 20px;
+             font-size: 16px;
+             color: white;
+             background-color: #0073e6;
+             border: none;
+             border-radius: 5px;
+             cursor: pointer;
+             transition: background-color 0.3s ease;
+         }
+         button:hover {
+             background-color: #005bb5;
+         }
+     </style>
 </head>
 <body>
-    <script>
-        window.location.replace('https://wix.app/payments/checkout-result/success');
+    <button id="deeplinkbtn" onclick="openDeepLink()">Open Deep Link</button>
+ 
+     <script>
+         function openDeepLink() {
+             const data = encodeURIComponent(JSON.stringify({
+                 errorCode: "1009",
+                 someExtraParam: true,
+             }));
+             const url = `https://wix.app/payments/checkout-result/error/${data}`;
+             window.open(url, "_blank");
+         }
     </script>
 </body>
 </html>
