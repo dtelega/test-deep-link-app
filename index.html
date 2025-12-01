@@ -33,6 +33,7 @@
 <body>
     <button id="deeplinkbtn" onclick="openErrorDeepLink()">Simulate with href change</button>
     <button id="deeplinkbtn" onclick="openSuccessDeepLink()">Simulate Success</button>
+    <button id="deeplinkbtn" onclick="openWithWindowReplace()"> Window replace</button>
  
      <script>
          function openWithHref() {
@@ -40,6 +41,10 @@
          }
         function openSuccessDeepLink() {
              window.open('https://wix.app/payments/checkout-result/success', "_blank");
+         }
+
+         function openWithWindowReplace() {
+             window.location.replace('https://wix.app/payments/checkout-result/error');
          }
     </script>
 </body>
