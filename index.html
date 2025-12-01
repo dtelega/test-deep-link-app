@@ -31,12 +31,12 @@
      </style>
 </head>
 <body>
-    <button id="deeplinkbtn" onclick="openErrorDeepLink()">Simulate Error</button>
+    <button id="deeplinkbtn" onclick="openErrorDeepLink()">Simulate with href change</button>
     <button id="deeplinkbtn" onclick="openSuccessDeepLink()">Simulate Success</button>
  
      <script>
-         function openErrorDeepLink() {
-             window.open('https://wix.app/payments/checkout-result/error?failureCode=1009', "_blank");
+         function openWithHref() {
+             document.location.href = 'https://wix.app/payments/checkout-result/error';
          }
         function openSuccessDeepLink() {
              window.open('https://wix.app/payments/checkout-result/success', "_blank");
