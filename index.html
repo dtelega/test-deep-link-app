@@ -34,10 +34,14 @@
     <button id="deeplinkbtn" onclick="openErrorDeepLink()">Simulate with href change</button>
     <button id="deeplinkbtn" onclick="openSuccessDeepLink()">Simulate Success</button>
     <button id="deeplinkbtn" onclick="openWithWindowReplace()"> Window replace</button>
+    <button id="deeplinkbtn" onclick="openWithHrefNativeLink()">href = wix://payments/checkout-result/OK</button>
  
      <script>
          function openWithHref() {
              document.location.href = 'https://wix.app/payments/checkout-result/error';
+         }
+         function openWithHrefNativeLink() {
+             document.location.href = 'wix://payments/checkout-result/OK';
          }
         function openSuccessDeepLink() {
              window.open('https://wix.app/payments/checkout-result/success', "_blank");
